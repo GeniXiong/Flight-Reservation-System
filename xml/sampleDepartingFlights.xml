@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Flights>
+	<Flight Airplane="757" FlightTime="167" Number="2751">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 00:28 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>FLL</Code>
+			<Time>2019 May 05 03:15 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$396.33">20</FirstClass>
+			<Coach Price="$74.60">22</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="757" FlightTime="31" Number="2752">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 01:09 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>LGA</Code>
+			<Time>2019 May 05 01:40 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$72.39">0</FirstClass>
+			<Coach Price="$13.63">59</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A380" FlightTime="137" Number="2753">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 01:28 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>MCO</Code>
+			<Time>2019 May 05 03:45 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$81.30">28</FirstClass>
+			<Coach Price="$24.37">86</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="717" FlightTime="71" Number="2754">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 01:46 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>BWI</Code>
+			<Time>2019 May 05 02:57 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$225.41">6</FirstClass>
+			<Coach Price="$65.97">6</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A380" FlightTime="53" Number="2755">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 02:17 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>BWI</Code>
+			<Time>2019 May 05 03:10 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$31.27">68</FirstClass>
+			<Coach Price="$9.37">84</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="737" FlightTime="157" Number="2756">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 02:37 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>ATL</Code>
+			<Time>2019 May 05 05:14 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$424.89">18</FirstClass>
+			<Coach Price="$118.97">30</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A320" FlightTime="38" Number="2757">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 03:14 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>EWR</Code>
+			<Time>2019 May 05 03:52 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$240.47">7</FirstClass>
+			<Coach Price="$23.27">40</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A320" FlightTime="50" Number="2758">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 03:54 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>DCA</Code>
+			<Time>2019 May 05 04:44 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$314.82">7</FirstClass>
+			<Coach Price="$30.47">98</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="767" FlightTime="51" Number="2759">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 04:55 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>IAD</Code>
+			<Time>2019 May 05 05:46 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$37.05">101</FirstClass>
+			<Coach Price="$19.26">5</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="757" FlightTime="155" Number="2760">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 05:42 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>MSP</Code>
+			<Time>2019 May 05 08:17 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$367.69">10</FirstClass>
+			<Coach Price="$69.21">93</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="757" FlightTime="242" Number="2761">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 06:05 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>RSW</Code>
+			<Time>2019 May 05 10:07 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$573.14">19</FirstClass>
+			<Coach Price="$107.89">160</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="757" FlightTime="112" Number="2762">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 06:31 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>MDW</Code>
+			<Time>2019 May 05 08:23 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$264.33">20</FirstClass>
+			<Coach Price="$49.76">118</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="747" FlightTime="109" Number="2763">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 06:57 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>DTW</Code>
+			<Time>2019 May 05 08:46 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$66.46">9</FirstClass>
+			<Coach Price="$20.60">49</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="767" FlightTime="60" Number="2764">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 07:46 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>IAD</Code>
+			<Time>2019 May 05 08:46 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$43.59">63</FirstClass>
+			<Coach Price="$22.67">69</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A340" FlightTime="127" Number="2765">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 08:49 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>IND</Code>
+			<Time>2019 May 05 10:56 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$301.02">27</FirstClass>
+			<Coach Price="$35.94">228</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="757" FlightTime="129" Number="2766">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 09:12 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>IND</Code>
+			<Time>2019 May 05 11:21 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$304.98">3</FirstClass>
+			<Coach Price="$57.41">82</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A320" FlightTime="194" Number="2767">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 09:19 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>MSY</Code>
+			<Time>2019 May 05 12:33 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$1,226.84">9</FirstClass>
+			<Coach Price="$118.73">121</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="747" FlightTime="222" Number="2768">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 09:45 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>MEM</Code>
+			<Time>2019 May 05 13:27 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$135.42">99</FirstClass>
+			<Coach Price="$41.98">285</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A340" FlightTime="80" Number="2769">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 09:55 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>RDU</Code>
+			<Time>2019 May 05 11:15 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$190.20">19</FirstClass>
+			<Coach Price="$22.71">235</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="767" FlightTime="157" Number="2770">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 10:23 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>MEM</Code>
+			<Time>2019 May 05 13:00 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$114.59">37</FirstClass>
+			<Coach Price="$59.59">157</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A320" FlightTime="223" Number="2771">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 10:59 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>MCO</Code>
+			<Time>2019 May 05 14:42 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$1,407.08">7</FirstClass>
+			<Coach Price="$136.17">7</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A310" FlightTime="36" Number="2772">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 11:41 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>PHL</Code>
+			<Time>2019 May 05 12:17 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$112.34">14</FirstClass>
+			<Coach Price="$13.48">141</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="777" FlightTime="80" Number="2773">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 12:13 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>CLE</Code>
+			<Time>2019 May 05 13:33 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$76.84">59</FirstClass>
+			<Coach Price="$15.18">150</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A310" FlightTime="107" Number="2774">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 12:28 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>ORD</Code>
+			<Time>2019 May 05 14:15 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$338.74">12</FirstClass>
+			<Coach Price="$40.65">189</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A330" FlightTime="69" Number="2775">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 13:04 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>DCA</Code>
+			<Time>2019 May 05 14:13 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$124.78">19</FirstClass>
+			<Coach Price="$13.98">215</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="767" FlightTime="113" Number="2776">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 13:26 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>BNA</Code>
+			<Time>2019 May 05 15:19 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$82.41">62</FirstClass>
+			<Coach Price="$42.85">32</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="747" FlightTime="34" Number="2777">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 13:51 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>LGA</Code>
+			<Time>2019 May 05 14:25 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$20.81">55</FirstClass>
+			<Coach Price="$6.45">302</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="737" FlightTime="214" Number="2778">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 14:08 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>MCI</Code>
+			<Time>2019 May 05 17:42 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$579.43">28</FirstClass>
+			<Coach Price="$162.24">86</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A330" FlightTime="195" Number="2779">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 14:24 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>STL</Code>
+			<Time>2019 May 05 17:39 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$350.84">21</FirstClass>
+			<Coach Price="$39.29">133</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="737" FlightTime="143" Number="2780">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 15:05 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>MCO</Code>
+			<Time>2019 May 05 17:28 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$385.84">26</FirstClass>
+			<Coach Price="$108.04">52</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="767" FlightTime="101" Number="2781">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 15:34 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>CLT</Code>
+			<Time>2019 May 05 17:15 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$73.88">74</FirstClass>
+			<Coach Price="$38.42">200</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A320" FlightTime="172" Number="2782">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 15:48 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>BNA</Code>
+			<Time>2019 May 05 18:40 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$1,086.55">5</FirstClass>
+			<Coach Price="$105.15">53</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A330" FlightTime="129" Number="2783">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 17:04 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>ATL</Code>
+			<Time>2019 May 05 19:13 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$231.88">4</FirstClass>
+			<Coach Price="$25.97">49</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A330" FlightTime="290" Number="2784">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 17:33 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>DFW</Code>
+			<Time>2019 May 05 22:23 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$523.91">12</FirstClass>
+			<Coach Price="$58.68">293</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A380" FlightTime="145" Number="2785">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 18:20 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>MSP</Code>
+			<Time>2019 May 05 20:45 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$85.97">123</FirstClass>
+			<Coach Price="$25.77">272</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="757" FlightTime="87" Number="2786">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 18:43 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>RDU</Code>
+			<Time>2019 May 05 20:10 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$206.46">8</FirstClass>
+			<Coach Price="$38.86">38</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="737" FlightTime="165" Number="2787">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 19:47 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>MSP</Code>
+			<Time>2019 May 05 22:32 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$447.06">18</FirstClass>
+			<Coach Price="$125.18">3</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="717" FlightTime="63" Number="2788">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 20:41 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>PIT</Code>
+			<Time>2019 May 05 21:44 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$197.76">18</FirstClass>
+			<Coach Price="$57.88">42</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A380" FlightTime="97" Number="2789">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 21:43 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>CMH</Code>
+			<Time>2019 May 05 23:20 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$57.49">12</FirstClass>
+			<Coach Price="$17.24">88</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A380" FlightTime="243" Number="2790">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 22:11 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>MCI</Code>
+			<Time>2019 May 06 02:14 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$143.51">16</FirstClass>
+			<Coach Price="$43.02">372</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A340" FlightTime="108" Number="2791">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 22:27 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>CVG</Code>
+			<Time>2019 May 06 00:15 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$256.67">0</FirstClass>
+			<Coach Price="$30.65">220</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="757" FlightTime="130" Number="2792">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 22:42 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>IND</Code>
+			<Time>2019 May 06 00:52 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$306.59">32</FirstClass>
+			<Coach Price="$57.71">99</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="737" FlightTime="61" Number="2793">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 23:52 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>BWI</Code>
+			<Time>2019 May 06 00:53 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$165.00">20</FirstClass>
+			<Coach Price="$46.20">89</Coach>
+		</Seating>
+	</Flight>
+	<Flight Airplane="A340" FlightTime="203" Number="2794">
+		<Departure>
+			<Code>BOS</Code>
+			<Time>2019 May 05 23:58 GMT</Time>
+		</Departure>
+		<Arrival>
+			<Code>DFW</Code>
+			<Time>2019 May 06 03:21 GMT</Time>
+		</Arrival>
+		<Seating>
+			<FirstClass Price="$481.34">25</FirstClass>
+			<Coach Price="$57.47">193</Coach>
+		</Seating>
+	</Flight>
+</Flights>

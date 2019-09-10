@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Flights</title>
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css"  th:src="@{/css/bootstrap.min.css}" src="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"  th:src="@{/css/bootstrap-grid.min.css}" src="../static/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" th:href="@{/css/flights.css}" href="../static/css/flights.css">
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="section">
+    <nav class="navbar fixed-top navbar-light bg-light bg-faded">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/index">
+                <i class="fas fa-fighter-jet"></i>
+            WPI Home
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="container">
+    <form action="#" th:action="@{/reserve}" method="POST">
+        <div class="row">
+        <!-- tabs -->
+        <div class="nav flex-column nav-pills col-lg-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="togo-tab" data-toggle="pill" href="#togo" role="tab" aria-controls="togo" aria-selected="true">Departing Trips</a>
+            <a class="nav-link" id="return-tab" data-toggle="pill" href="#return" role="tab" aria-controls="return" aria-selected="false">Returning Trips</a>
+            <input type="submit" class="btn btn-outline-secondary"></input>
+        </div>
+        <div class="tab-content col-lg-9" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="togo" role="tabpanel" aria-labelledby="togo-tab">
+                <div class="flights">
+                    <button type="button" class="btn btn-primary btn-lg btn-block" disabled>All To Go Trips</button>
+                        
+                    <table id="toTrips" class="table table-striped" style="width:100%">  
+                        <thead>
+                            <tr>
+                            <th>
+                                <!-- <p>Detail</p> -->
+                                <button class="btn btn-info btn-sm" type="button" onclick="toggleSortTime('toTrips', 0, 'departDate')">Depart Time<i class="fas fa-sort"></i></button>
+                                <button class="btn btn-info btn-sm" type="button" onclick="toggleSortTime('toTrips', 0, 'arrivalDate')">Arrival Time<i class="fas fa-sort"></i></button>
+                                
+                            </th>
+                            <th class="th"><button class="btn btn-info btn-sm" type="button" onclick="toggleSortNumber('toTrips', 1)">Legs<i class="fas fa-sort"></i></button></th>
+                            <th class="th"><button class="btn btn-info btn-sm" type="button" onclick="toggleSortNumber('toTrips', 2)">Price($)<i class="fas fa-sort"></i></button></th>
+                            <th class="th"><button class="btn btn-info btn-sm" type="button" onclick="toggleSortNumber('toTrips', 3)">Travel Time(min)<i class="fas fa-sort"></i></button></th>
+                            <th class="th"></th>
+                            </tr>
+                        </thead>
+                        <h2 th:if="${trips.toTrips().size() == 0}">Sorry, No available flights, please return to the home page and search again!</h2>
+                        <div th:each="trip,iterStat:${trips.toTrips()}">
+                        <tbody>
+                            <tr>
+                            <td>
+                                <div th:each="leg,iterStat:${trip.legs()}">
+                                    <strong th:text="${leg.departurecode()}"></strong>
+                                    <span id="departDate" th:text="${leg.displayDepartureDate()}"></span>
+                                    <strong th:text="${leg.arrivalcode()}"></strong>
+                                    <span id="arrivalDate" th:text="${leg.displayArrivalDate()}"></span>
+                                </div>
+                                <button type="button" class="btn btn-danger btn-sm" disabled><span th:text="${trip.seatType()}"></span></button>
+                            </td>
+                            <td><span th:text="${trip.legs().size()}"></span></td>
+                            <td><span th:text="${trip.totalprice()}"></span></td>
+                            <td><span th:text="${trip.totaltraveltime()}"></span></td>
+                            <td>
+                                <div class="btn-group-toggle" data-toggle="buttons">
+                                    <!-- <label class="btn btn-info active">
+                                        <input type="radio" name="toTripIndex" id="option1" checked autocomplete="off" th:value="${trip.toTripIndexOfTrip()}">Select
+                                    </label> -->
+                                    <label class="btn">
+                                        <input type="radio" name='toTripIndex' th:value="${trip.toTripIndexOfTrip()}"><i class="fa fa-circle fa-2x"></i><i class="fa fa-dot-circle fa-2x"></i><span> Select</span>
+                                    </label>
+                                </div>
+                            </td>
+                            </tr>
+                        </tbody>
+                        </div> 
+                        <tfoot>
+                        <tr>
+                            <th class="th-sm">Trip Details</th>
+                            <th class="th-sm">Legs</th>
+                            <th class="th-sm">Total Price</th>
+                            <th class="th-sm">Travel Time</th>
+                            <th class="th-sm">Select</th>
+                        </tr>
+                        </tfoot>
+                    </table>     
+                </div>
+            </div>
+            <div class="tab-pane fade" id="return" role="tabpanel" aria-labelledby="return-tab">
+                <div class="flights">
+                    <button type="button" class="btn btn-primary btn-lg btn-block" disabled>All Return Trips</button>  
+                    <label class="btn btn-secondary" style="display:none">
+                        <input type="radio" name="returnTripIndex" value=-1 checked>
+                    </label>
+                    <table id="returnTrips" class="table table-striped" style="width:100%">  
+                        <thead>
+                            <tr>
+                            <th>
+                                <button class="btn btn-info btn-sm" type="button" onclick="toggleSortTime('returnTrips', 0, 'departDate')">Depart Time<i class="fas fa-sort"></i></button>
+                                <button class="btn btn-info btn-sm" type="button" onclick="toggleSortTime('returnTrips', 0, 'arrivalDate')">Arrival Time<i class="fas fa-sort"></i></button>
+                            </th>
+                            <th class="th"><button class="btn btn-info btn-sm" type="button" onclick="toggleSortNumber('returnTrips', 1)">Legs<i class="fas fa-sort"></i></button></th>
+                            <th class="th"><button class="btn btn-info btn-sm" type="button" onclick="toggleSortNumber('returnTrips', 2)">Price($)<i class="fas fa-sort"></i></button></th>
+                            <th class="th"><button class="btn btn-info btn-sm" type="button" onclick="toggleSortNumber('returnTrips', 3)">Travel Time(min)<i class="fas fa-sort"></i></button></th>
+                            <th class="th"></th>
+                            </tr>
+                        </thead>
+                        <h2 th:if="${trips.returnTrips().size() == 0}">Sorry, No available flights, please return to the home page and search again!</h2>
+                        <div th:each="trip,iterStat:${trips.returnTrips()}">
+                        <tbody>
+                            <tr>
+                            <td>
+                                <div th:each="leg,iterStat:${trip.legs()}">
+                                    <strong th:text="${leg.departurecode()}"></strong>
+                                    <span id="departDate" th:text="${leg.displayDepartureDate()}"></span>
+                                    <strong th:text="${leg.arrivalcode()}"></strong>
+                                    <span id="arrivalDate" th:text="${leg.displayArrivalDate()}"></span>
+
+                                </div>
+                                <button type="button" class="btn btn-danger btn-sm" disabled><span th:text="${trip.seatType()}"></span></button>
+                            </td>
+                            <td><span th:text="${trip.legs().size()}"></span></td>
+                            <td><span th:text="${trip.totalprice()}"></span></td>
+                            <td><span th:text="${trip.totaltraveltime()}"></span></td>
+                            <td>
+                                <div class="btn-group-toggle" data-toggle="buttons">
+                                    <!-- <label class="btn btn-info active">
+                                        <input type="radio" name="returnTripIndex" id="option1" checked autocomplete="off" th:value="${trip.returnTripIndexOfTrip()}">Select
+                                    </label> -->
+                                    <label class="btn">
+                                        <input type="radio" name='returnTripIndex' th:value="${trip.returnTripIndexOfTrip()}"><i class="fa fa-circle fa-2x"></i><i class="fa fa-dot-circle fa-2x"></i><span> Select</span>
+                                    </label>
+                                </div>
+
+                            </td>
+                            </tr>
+                        </tbody>
+                        </div> 
+                        <tfoot>
+                        <tr>
+                            <th class="th-sm">Trip Details</th>
+                            <th class="th-sm">Legs</th>
+                            <th class="th-sm">Total Price</th>
+                            <th class="th-sm">Travel Time</th>
+                            <th class="th-sm">Select</th>
+                        </tr>
+                        </tfoot>
+                    </table>     
+                </div>
+            </div>
+        </div>
+        <!-- /tabs -->
+        </div>
+    </form>
+</div>  
+             
+</body>
+<script type="text/javascript" src="../static/js/sorter.js" th:src="@{/js/sorter.js}"></script> 
+</html>

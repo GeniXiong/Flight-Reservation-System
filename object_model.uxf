@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>342</x>
+      <y>228</y>
+      <w>198</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>_ServerInterface_
+--
+-mUrlBase:String
+--
++getInstance():ServerInterface
++getAirports():String
++getAirplanes():String
++getDepartFlights(String, String,String):Flights
++getArriveFlights(String, String,String):Flights
++lock():boolean
++unlock():boolean
++reserveSeat(String): boolean
++resetDatabase(): boolean
+--
+Responsibilities:
+1.Communicating with the server, and
+parse XML to needed information.
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>180</x>
+      <y>234</y>
+      <w>144</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>_Airport_
+--
+-mName: String
+-mCode: String
+-mLatitude: double
+-mLongitude: double
+--
++Airport():
++toString():
++name(): 
++code(String): 
++latitude(): 
++longitude(): 
++compareTo(Airport):int
++compare(Airport, Airport):int
++equals(obj):boolean
++isValid():boolean
++isValideCode(String):boolean
++isValideName(String):boolean
++isValideLatitude(String):boolean
++isValideLongtitude(String):boolean
+--
+Responsibilities:
+1.Store all airport information 
+parsed from XML.
+2.Check airport is valid.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>582</x>
+      <y>102</y>
+      <w>138</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>_Flight_
+--
+-mAirplane:Airplane
+-mFlightTime:int
+-mDepartureAiport:Airport
+-mDepartureGMTDate:Date
+-mDepartureLocalDate:Date
+-mArrivalAiport:Airport
+-mArrivalGMTDate:Date
+-mArrivalLocalDate:Date
+-mFirstClassSeatPrice: float
+-mCoachSeatPrice:float
+-mFirstClassSeatReserved:int
+-mCoachSeatReserved: int
+-mDateTransfer: DateTransfer
+--
++Flight():
++airplane():
++departureAiport():
++departureGMTDate():
++departureLocalDate():
++arrivalAiport():
++arrivalGMTDate():
++arrivalLocalDate():
++flighttime():
++firstclassprice():
++fristclassseatreserved():
++coachprice():
++coachseatreserved():
++isValid():
++isVlaidDate():
++toString():
+--
+Responsibilities
+1.Store all flight information 
+parsed from XML.
+2.Check airplane is valid.
+3.Store both local and GMT time
+of departure and arrival time.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>198</x>
+      <y>60</y>
+      <w>126</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>_Airports_
+--
+ArratList&lt;Airport&gt;
+--
+Responsibilities:
+Cache an ArrayList of Airports
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>246</y>
+      <w>126</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>_ToTrips_
+--
+-trips:ArrayList&lt;Flights&gt;
+--
+Responsibilities
+Storing all possible flights.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>24</x>
+      <y>234</y>
+      <w>132</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>_Airplane_
+--
+-mModel: String
+-mManufacturer: String
+-mFirstClassSeats: int
+-mCoachSeats: int
+--
++airplane():
++manufacturer():
++model():
++firstclassseats():
++coachseats():
++toString():
++equals():
++isValidManufacturer():
++isValidModel():
++isValidFirstClassSeats():
++isValidCoachSeats():
+--
+Responsibilities:
+1.Store all airplane information 
+parsed from XML.
+2.Check airplane is valid.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>816</x>
+      <y>594</y>
+      <w>150</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;boundary&gt;&gt;
+_View_
+--
+-controller:DaoFlight
+--
+Responsibilities:
+1.Build a friendly user interface
+to the customer.
+2.Catch inputs and commands by
+the customer.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>816</x>
+      <y>354</y>
+      <w>150</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;controller&gt;&gt;
+_DaoFlight_
+--
+-departDate:Date
+-departAirport:Airport
+-arrivalAirport:Airport
+-roundTrip:boolean
+-coachSeat:boolean
+-toTrips:ToTerips
+-returnTrips:ReturnTrips
+-confirmedToTrip:Flights
+-confirmedReturnTrip:Flights
+--
++reserve():
++getToTrips():ArrayList&lt;Flights&gt;
++getReturnTrips():ArrayList&lt;Flights&gt;
++cancel()
+--
+Responsibilities:
+1.Controller, communicating with
+user interface.
+2.Process inputs from View.
+3.Return flight results and refresh
+sorted results to View. 
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>888</x>
+      <y>246</y>
+      <w>126</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>_ReturnTrips_
+--
+-trips:ArrayList&lt;Flights&gt;
+--
+Responsibilities
+Storing all possible return
+flights, if it's one-way trip
+this set to null.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>396</y>
+      <w>114</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>_QueryFactory_
+--
+--
++getAirPorts():
++getAirplanes():
++getDepartureFlights():
++getArrivalFlights():
++lock():
++unlock():
++reserve():
+--
+Responsibilities:
+Build all the required
+commands of the server.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>564</y>
+      <w>204</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>_DateTransfer_
+--
+--
++assignQuery(float,float):String
++getTimes(float,float):int
++offCall(String):int
++getCharacterDataFromElement(Element):String
+--
+Responsibilities:
+1.Using TimeZoneDB API to transfer GMT time
+to local time based on longitute and latitute.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>582</x>
+      <y>582</y>
+      <w>168</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>_TimeZoneMap_
+--
+-timeZoneMap:TimeZoneMap
+-airportMap:HashMap&lt;String, Integer&gt;
+--
++getTimeZoneMap():TimeZoneMap
++getMap():HashMap&lt;String, Integer&gt;
+--
+Responsibilities:
+Cache a hashmap storing
+(airport code, offset from GMT)
+
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>582</x>
+      <y>474</y>
+      <w>186</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>_ZoneOffsetToGMT_
+--
+-zoneoffsettogmt:ZoneOffsetToGMT
+-offsetmap:HashMap&lt;Integer, String&gt;
+--
++getOffsetToGMT():ZoneOffsetToGMT
++getOffsetMap():HashMap&lt;Integer, String&gt;
+--
+Responsibilities:
+Cache a hashmap storing
+(offset to GMT, time zone name)
+
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>6</y>
+      <w>60</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>/ArrayList/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>354</x>
+      <y>60</y>
+      <w>126</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>_Flights_
+--
+-ArrayList&lt;Flight&gt;
+--
++getPrice():
++getTravelTime():
++getNumberOfLayovers():
+--
+Responsibilities:
+Store one trip, which may be 
+composed of no more than 3
+legs of flight.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>306</x>
+      <y>42</y>
+      <w>54</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+group=1</panel_attributes>
+    <additional_attributes>30.0;40.0;70.0;40.0;70.0;10.0;10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>42</y>
+      <w>54</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+group=3</panel_attributes>
+    <additional_attributes>30.0;40.0;70.0;40.0;70.0;10.0;10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>24</x>
+      <y>60</y>
+      <w>144</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>_Airplanes_
+--
+ArrayList&lt;Airplane&gt;
+--
+Responsibilities:
+Cache an ArrayList of Airplanes
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>924</x>
+      <y>60</y>
+      <w>84</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+FlightsSorter
+--
++byPrice():
++byDepartTime():
++byArrivalTime():
++byTravelTime():</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>744</x>
+      <y>60</y>
+      <w>150</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>_Trips_
+--
+-trips:ArrayList&lt;Flights&gt;
+--
++byPrice():
++byDepartTime():
++byArrivalTime():
++byTravelTime():
+--
+Responsibilities:
+1.Cache an ArrayList of Flights
+containing all possible flights.
+2.Implements FlightSorter interface
+to sort Trips according to
+price, depart time, arrive time, and
+travel time.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>210</y>
+      <w>54</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+group=4</panel_attributes>
+    <additional_attributes>30.0;40.0;70.0;40.0;70.0;10.0;10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>456</y>
+      <w>54</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+group=5</panel_attributes>
+    <additional_attributes>30.0;40.0;70.0;40.0;70.0;10.0;10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>732</x>
+      <y>564</y>
+      <w>54</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+group=6</panel_attributes>
+    <additional_attributes>30.0;40.0;70.0;40.0;70.0;10.0;10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>78</x>
+      <y>18</y>
+      <w>396</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>640.0;10.0;640.0;40.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>456</x>
+      <y>36</y>
+      <w>378</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;610.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>78</x>
+      <y>36</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>36</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>408</x>
+      <y>36</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>816</x>
+      <y>36</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>42</x>
+      <y>102</y>
+      <w>18</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>102</y>
+      <w>18</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>474</x>
+      <y>60</y>
+      <w>282</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>450.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>474</x>
+      <y>102</y>
+      <w>120</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>804</x>
+      <y>192</y>
+      <w>18</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>804</x>
+      <y>216</y>
+      <w>156</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;240.0;10.0;240.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>828</x>
+      <y>306</y>
+      <w>18</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>948</x>
+      <y>306</y>
+      <w>18</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>444</x>
+      <y>372</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>66</x>
+      <y>102</y>
+      <w>366</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>590.0;210.0;590.0;100.0;590.0;130.0;330.0;130.0;330.0;10.0;330.0;130.0;10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>882</x>
+      <y>564</y>
+      <w>18</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>534</x>
+      <y>420</y>
+      <w>60</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;280.0;80.0;280.0;40.0;280.0;40.0;110.0;80.0;110.0;40.0;110.0;40.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>852</x>
+      <y>36</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>190.0;50.0;190.0;10.0;10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+</diagram>

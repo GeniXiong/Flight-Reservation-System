@@ -1,0 +1,9 @@
+jellycat.flight
+jellycat.flight.domain.airplane
+jellycat.flight.domain.airport
+jellycat.flight.domain.dao
+jellycat.flight.domain.driver
+jellycat.flight.domain.flight
+jellycat.flight.domain.trip
+jellycat.flight.domain.utils
+jellycat.flight.web

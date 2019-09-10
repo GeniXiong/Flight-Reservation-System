@@ -1,0 +1,83 @@
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+bottom: .5em;
+}
+
+body {
+    background: #43C6AC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.section {
+    position: relative;	
+	height: 10vh;
+}
+/* .container{
+    margin-top: 12vh;
+} */
+
+
+label.btn span {
+    font-size: 1.5em ;
+  }
+  
+  label input[type="radio"] ~ i.fa.fa-circle{
+      color: #ffffff;    display: inline;
+  }
+  label input[type="radio"] ~ i.fa.fa-dot-circle{
+      display: none;
+  }
+  label input[type="radio"]:checked ~ i.fa.fa-circle{
+      display: none;
+  }
+  label input[type="radio"]:checked ~ i.fa.fa-dot-circle{
+      color: #138BBF;    display: inline;
+  }
+  label:hover input[type="radio"] ~ i.fa {
+  color: #138BBF;
+  }
+  
+ 
+  div[data-toggle="buttons"] label.active{
+      color: #138BBF;
+  }
+  
+  div[data-toggle="buttons"] label {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 2em;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  background-color: none;
+  border: 0px solid #ffffff;
+  border-radius: 3px;
+  color: #ffffff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  }
+  
+  div[data-toggle="buttons"] label:hover {
+  color: #138BBF;
+  }
+  
+  div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  }  
